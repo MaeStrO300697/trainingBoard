@@ -3,7 +3,7 @@ Training Board - руководство для быстрого ознакомл
 
 
 
-[Алгоритмы Сортировки:](https://github.com/MaeStrO300697/trainingBoard/SortingAlgorithms)
+[Алгоритмы Сортировки:](https://github.com/MaeStrO300697/trainingBoard/tree/master/SortingAlgorithms)
 --
 
     1. Selection Sort (Сортировка выбором) +
@@ -14,7 +14,7 @@ Training Board - руководство для быстрого ознакомл
     6. Шейкер сортировка -
     7. Бинарное дерево -
 
-[Алгоритмы Поиска:](https://github.com/MaeStrO300697/trainingBoard/SearchAlgorithms)
+[Алгоритмы Поиска:](https://github.com/MaeStrO300697/trainingBoard/tree/master/SearchAlgorithms)
 ---
 
     1. Линейный поиск -
