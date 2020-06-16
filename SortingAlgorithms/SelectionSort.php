@@ -14,26 +14,34 @@
 
 $array = [8, 4, 9, 3, 5, 7];
 
-for ($i = 0; $i < count($array); $i++) {
-    //Текущее минимальное число
-    $currentMinNumber = $array[$i];
-    //Задаем текущий указатель минимального числа, так как минимальным числом мы считаем текущий елемент
-    $currentIndexNumber = $i;
-    //Задали минимальным числом первый елемент массива
-    //После чего прошлись по массиву сравнивая текущее минимальное число с другими в порядке очереди
-    for ($j = $i; $j < count($array); $j++){
-        //Поиск минимальног числа
-        if ($currentMinNumber > $array[$j]){
-            //Присвоение минимального числа и его положения
-            $currentMinNumber = $array[$j];
-            $currentIndexNumber = $j;
+/**
+ * @param $array
+ * @return mixed
+ */
+function selectionSort($array)
+{
+    for ($i = 0; $i < count($array); $i++) {
+        //Текущее минимальное число
+        $currentMinNumber = $array[$i];
+        //Задаем текущий указатель минимального числа, так как минимальным числом мы считаем текущий елемент
+        $currentIndexNumber = $i;
+        //Задали минимальным числом первый елемент массива
+        //После чего прошлись по массиву сравнивая текущее минимальное число с другими в порядке очереди
+        for ($j = $i; $j < count($array); $j++) {
+            //Поиск минимальног числа
+            if ($currentMinNumber > $array[$j]) {
+                //Присвоение минимального числа и его положения
+                $currentMinNumber = $array[$j];
+                $currentIndexNumber = $j;
+            }
         }
+        //Временно сохранили число с которым будет обмен
+        $timeNumber = $array[$i];
+        //При нахождении меньшего числа произвили перестановку минимального числа с $i
+        $array[$i] = $array[$currentIndexNumber];
+        $array[$currentIndexNumber] = $timeNumber;
     }
-    //Временно сохранили число с которым будет обмен
-    $timeNumber = $array[$i];
-    //При нахождении меньшего числа произвили перестановку минимального числа с $i
-    $array[$i] = $array[$currentIndexNumber];
-    $array[$currentIndexNumber] = $timeNumber;
+    return $array;
 }
 
 
