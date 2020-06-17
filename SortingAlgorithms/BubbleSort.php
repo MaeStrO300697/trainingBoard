@@ -108,7 +108,6 @@ function bubbleSort($array)
                     $array[$i] = $array[$i + 1];
                     $array[$i + 1] = $timeNumber;
                     $success = true;
-                    var_dump($array);
                 }
             }
         }
