@@ -27,7 +27,7 @@ function selectionSort($array)
         $currentIndexNumber = $i;
         //Задали минимальным числом первый елемент массива
         //После чего прошлись по массиву сравнивая текущее минимальное число с другими в порядке очереди
-        for ($j = $i; $j < count($array); $j++) {
+        for ($j = $i + 1; $j < count($array); $j++) {
             //Поиск минимальног числа
             if ($currentMinNumber > $array[$j]) {
                 //Присвоение минимального числа и его положения
@@ -43,5 +43,9 @@ function selectionSort($array)
     }
     return $array;
 }
+
+var_dump(selectionSort($array));
+
+
 
 
